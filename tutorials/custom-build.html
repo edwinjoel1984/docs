@@ -15,9 +15,9 @@
     </a>
 
     <p>The build process is using <a href="https://webpack.js.org/" target="_blank">Webpack</a>, <a href="https://babeljs.io/" target="_blank">Babel</a> and
-      bunch of NPM tasks defined in
+      a bunch of NPM tasks defined in
       <a href="https://github.com/handsontable/handsontable/blob/master/package.json" target="_blank">package.json</a>.
-    During this process, the source files located in the <code>src/*</code> directory are transformed into output files:</p>
+    During this process, the source files located in the <code>src/*</code> directory are transformed into the output files:</p>
     <ul>
       <li><code>./dist/handsontable.js</code></li>
       <li><code>./dist/handsontable.css</code></li>
@@ -40,24 +40,24 @@
       <li>
         <code>npm run test</code> - runs several tasks in this order:
         <ul>
-          <li><code>npm run lint</code> - check if changes applied into source code are valid with our code style (mostly we follow
+          <li><code>npm run lint</code> - check if changes applied into source code are valid with our code style (we mostly follow the
             <a href="https://github.com/airbnb/javascript" target="_blank">Airbnb JavaScript</a> code style).</li>
-          <li><code>npm run test:unit</code> - runs test suite in node environment. It uses <a href="https://facebook.github.io/jest/" target="_blank">Jest</a> as a test runner.</li>
-          <li><code>npm run test:walkontable</code> - runs a single build followed by Jasmine test suite and executes in PhantomJS.</li>
-          <li><code>npm run test:e2e</code> - runs a single build followed by Jasmine test suite and by using generated bundle <code>/dist/handsontable.js</code> executes it in PhantomJS.</li>
+          <li><code>npm run test:unit</code> - runs the test suite in node environment. It uses <a href="https://facebook.github.io/jest/" target="_blank">Jest</a> as a test runner.</li>
+          <li><code>npm run test:walkontable</code> - runs a single build followed by Jasmine test suite, executes in PhantomJS.</li>
+          <li><code>npm run test:e2e</code> - runs a single build followed by Jasmine test suite and by using the generated bundle <code>/dist/handsontable.js</code> executes it in PhantomJS.</li>
           <li><code>npm run test:production</code> - runs a single build followed by Jasmine test suite and by using generated minified bundle <code>/dist/handsontable.full.min.js</code> executes it in PhantomJS.</li>
         </ul>
       </li>
       <li>
-        <code>npm run build</code> - runs a single build but without code quality checking. It internally executes this tasks:
+        <code>npm run build</code> - runs a single build but without the code quality checking. It internally executes these tasks:
         <ul>
-          <li><code>npm run build:commonjs</code> - transpiles files into <code>CommonJS</code> format. These files are published into NPM repository later.</li>
-          <li><code>npm run build:es</code> - transpiles files into <code>import/export</code> format. These files are published into NPM repository later.</li>
-          <li><code>npm run build:umd</code> - creates bundles (<code>dist/handsontable.js</code>, <code>dist/handsontable.css</code>, <code>dist/handsontable.full.js</code> and <code>dist/handsontable.full.css</code>) which are compatible with UMD (Universal Module Definition).</li>
-          <li><code>npm run build:umd.min</code> - creates minified bundles (<code>dist/handsontable.min.js</code>, <code>dist/handsontable.min.css</code>, <code>dist/handsontable.min.full.js</code> and <code>dist/handsontable.min.full.css</code>) which are compatible with UMD (Universal Module Definition).</li>
+          <li><code>npm run build:commonjs</code> - transpiles files into the <code>CommonJS</code> format. These files are published into NPM repository later.</li>
+          <li><code>npm run build:es</code> - transpiles files into the <code>import/export</code> format. These files are published into NPM repository later.</li>
+          <li><code>npm run build:umd</code> - creates the bundles (<code>dist/handsontable.js</code>, <code>dist/handsontable.css</code>, <code>dist/handsontable.full.js</code> and <code>dist/handsontable.full.css</code>), which are compatible with UMD (Universal Module Definition).</li>
+          <li><code>npm run build:umd.min</code> - creates the minified bundles (<code>dist/handsontable.min.js</code>, <code>dist/handsontable.min.css</code>, <code>dist/handsontable.min.full.js</code> and <code>dist/handsontable.min.full.css</code>), which are compatible with UMD (Universal Module Definition).</li>
         </ul>
       </li>
-      <li><code>npm run watch</code> - watches for changes in source directory and runs a build when a change is observed. For faster rebuild when a change is observed watcher triggers task which builds files without minify.</li>
+      <li><code>npm run watch</code> - watches for changes in source directory and runs a build when a change is observed. For faster rebuild when a change is observed, the watcher triggers the file-building task without minify.</li>
       </li>
     </ul>
   </div>
@@ -66,7 +66,7 @@
     <p>To run your own build, follow the below steps:</p>
     <ol>
       <li>Install Node.js (available for Windows, Mac and Linux). This will also install NPM (Node Package Manager) that
-        handles all the dependencies. Handsontable for building and testing requires <strong>Node.js >=6</strong> and <strong>npm >=3</strong>.
+        handles all the dependencies. Handsontable requires <strong>Node.js >=6</strong> and <strong>npm >=3</strong> for building and testing.
       </li>
       <li>Clone the Handsontable repository on your local disk and go to the directory where you cloned it.</li>
       <li>Run <code>npm install</code> to download all the dependencies defined in <code>package.json</code>. The
